@@ -1,22 +1,22 @@
 // Grab elements
 const selectedElement = selector => {
-  const element = document.querySelector(selector);
-  if (element) return element;
-  throw new Error(
-    `Something went, make sure that ${selector} exists or is typed correctly.`,
-  );
+	const element = document.querySelector(selector);
+	if (element) return element;
+	throw new Error(
+		`Something went, make sure that ${selector} exists or is typed correctly.`
+	);
 };
 
 // console.log(selectedElement('.navbar'))
 
 // Nav styles on scroll
 const scrollHeader = () => {
-  const headerElement = selectedElement('#header');
-  if (this.scrollY >= 15) {
-    headerElement.classList.add('activated');
-  } else {
-    headerElement.classList.remove('activated');
-  }
+	const headerElement = selectedElement('#header');
+	if (this.scrollY >= 15) {
+		headerElement.classList.add('activated');
+	} else {
+		headerElement.classList.remove('activated');
+	}
 };
 
 window.addEventListener('scroll', scrollHeader);
@@ -25,9 +25,9 @@ window.addEventListener('scroll', scrollHeader);
 const menuToggleIcon = selectedElement('#menu-toggle-icon');
 
 const toggleMenu = () => {
-  const mobileMenu = selectedElement('#menu');
-  mobileMenu.classList.toggle('activated');
-  menuToggleIcon.classList.toggle('activated');
+	const mobileMenu = selectedElement('#menu');
+	mobileMenu.classList.toggle('activated');
+	menuToggleIcon.classList.toggle('activated');
 };
 
 menuToggleIcon.addEventListener('click', toggleMenu);
@@ -41,20 +41,19 @@ menuToggleIcon.addEventListener('click', toggleMenu);
 // Switch theme/add to local storage
 const bodyElement = document.body;
 const themeToggleBtn = selectedElement('#theme-toggle-btn');
-const currenTheme = localStorage.getItem('currenTheme');
+const currentTheme = localStorage.getItem('currentTheme');
 
-if (currenTheme) {
-  bodyElement.classList.add('light-theme');
+if (currentTheme) {
+	bodyElement.classList.add('light-theme');
 }
 
 themeToggleBtn.addEventListener('click', () => {
-  bodyElement.classList.toggle('light-theme');
+	bodyElement.classList.toggle('light-theme');
 
-  if (bodyElement.classList.contains('light-theme')) {
-    localStorage.setItem('currenTheme', 'themeActive');
-  } else {
-    localStorage.removeItem('currenTheme');
-  }
-
+	if (bodyElement.classList.contains('light-theme')) {
+		localStorage.setItem('currentTheme', 'themeActive');
+	} else {
+		localStorage.removeItem('currentTheme');
+	}
 });
 // Swiper
