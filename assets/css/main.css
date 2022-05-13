@@ -256,17 +256,15 @@ body.light-theme {
 }
 
 .form-close-btn {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    border: 2px solid var(--secondary-background-color);
-    width: 4rem;
-    height: 4rem;
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	border: 2px solid var(--secondary-background-color);
+	width: 4rem;
+	height: 4rem;
 }
 /* Form  JavaScript Styles 58:25*/
 /* https://www.youtube.com/watch?v=Aj7HLsJenVg  */
-
-
 
 /* Featured articles */
 /* Featured articles - Sidebar */
