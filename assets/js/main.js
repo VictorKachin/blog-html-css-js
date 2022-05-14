@@ -1,5 +1,5 @@
 // Grab elements
-const selectedElement = selector => {
+const selectedElement = (selector) => {
 	const element = document.querySelector(selector);
 	if (element) return element;
 	throw new Error(
@@ -48,7 +48,7 @@ formCloseBtn.addEventListener('click', () =>
 );
 
 // -- Close the search from popup on ESC keypress
-window.addEventListener('keyup', event => {
+window.addEventListener('keyup', (event) => {
 	if (event.key === 'Escape')
 		searchFormContainer.classList.remove('activated');
 });
