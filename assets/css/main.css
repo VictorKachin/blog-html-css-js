@@ -214,8 +214,8 @@ body.light-theme {
 	left: 0;
 	z-index: 9999;
 	display: flex;
-	/* opacity: 0; */
-	/* transform: scale(0); */
+	opacity: 0;
+	transform: scale(0);
 	transition: opacity 0.5s;
 }
 
@@ -266,6 +266,10 @@ body.light-theme {
 /* Form  JavaScript Styles 58:25*/
 /* https://www.youtube.com/watch?v=Aj7HLsJenVg  */
 
+.search-form-container.activated {
+	opacity: 1;
+	transform: scale(1);
+}
 /* Featured articles */
 /* Featured articles - Sidebar */
 /* Quick read */

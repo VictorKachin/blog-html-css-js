@@ -35,8 +35,23 @@ menuToggleIcon.addEventListener('click', toggleMenu);
 // https://www.youtube.com/watch?v=Aj7HLsJenVg
 
 // Open/Close search from pop-up
+const formOpenBtn = selectedElement('#search-icon');
+const formCloseBtn = selectedElement('#form-close-btn');
+const searchFormContainer = selectedElement('#search-form-container');
+
+formOpenBtn.addEventListener('click', () =>
+	searchFormContainer.classList.add('activated')
+);
+
+formCloseBtn.addEventListener('click', () =>
+	searchFormContainer.classList.remove('activated')
+);
 
 // -- Close the search from popup on ESC keypress
+window.addEventListener('keyup', event => {
+	if (event.key === 'Escape')
+		searchFormContainer.classList.remove('activated');
+});
 
 // Switch theme/add to local storage
 const bodyElement = document.body;
